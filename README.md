@@ -3,6 +3,8 @@
 [![Pfine Website](https://img.shields.io/badge/Website-pfine360.com-blue?style=for-the-badge&logo=googlechrome)](https://www.pfine360.com/)
 [![Download Installer](https://img.shields.io/badge/Download-Installer-green?style=for-the-badge&logo=windows)](https://www.pfine360.com/pfine-organisation-project-management/)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6?style=for-the-badge&logo=windows)](https://www.pfine360.com/pfine-organisation-project-management/)
+[![Software Video Walkthrough](https://www.youtube.com/watch?v=7AEd9aWwXhY)
+
 
 **PFine** is an offline-first, relational desktop workspace designed for non-governmental organisations (NGOs), field agencies, enterprise teams, and project managers. Built to operate seamlessly without continuous internet connectivity, PFine links projects, beneficiaries, geographic records, field activities, photo evidence, and document archives into unified story graphs and dossiers.
 
