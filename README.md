@@ -12,9 +12,9 @@
 
 ## 🔗 Quick Links
 
-* **Official Website:** [https://www.pfine360.com/](https://www.pfine360.com/)
-* **Download Installer:** [https://www.pfine360.com/pfine-organisation-project-management/](https://www.pfine360.com/pfine-organisation-project-management/)
-* **Video Walk Through:** [https://www.youtube.com/watch?v=7AEd9aWwXhY](https://www.youtube.com/watch?v=7AEd9aWwXhY) 
+* [**Official Website:** ](https://www.pfine360.com/)
+* [**Download Installer:** ](https://www.pfine360.com/pfine-organisation-project-management/)
+* [**Video Walk Through:** ](https://www.youtube.com/watch?v=7AEd9aWwXhY) 
 ---
 
 ## ✨ Key Features
@@ -82,7 +82,7 @@
 
 * **Main Website:** [Pfine360 Homepage](https://www.pfine360.com/)
 * **Software Overview & Installer:** [PFine Product Page](https://www.pfine360.com/pfine-organisation-project-management/)
-* **Video Walk Through:** [https://www.youtube.com/watch?v=7AEd9aWwXhY](https://www.youtube.com/watch?v=7AEd9aWwXhY) 
+* [**Video Walk Through:** ](https://www.youtube.com/watch?v=7AEd9aWwXhY) 
 ---
 
 *Copyright © PFine. All rights reserved.*
