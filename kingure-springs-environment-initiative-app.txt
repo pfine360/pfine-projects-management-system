@@ -1,0 +1,851 @@
+Project Directory:
+
+D:\kiangure-springs-environment-initiative
+
+CRITICAL FIRST STEP:
+
+Before inspecting, editing, running tests, creating files, changing schema, or making any implementation decision, first read and obey:
+
+D:\kiangure-springs-environment-initiative\AGENTS.md
+
+Work only inside the existing project documentation and impact management application.
+
+Primary goal:
+Create, display, and test a highly creative, professional, interconnected data relationship experience across Projects, Beneficiaries, Locations, Activities, Evidence, Documents, Media, and the organisation-wide operational history.
+
+This task is not simply to add demo data. The most important requirement is the way relationships are displayed, navigated, explained, and experienced.
+
+Creativity matters most.
+
+The application must feel like a serious organisational story system where users can move naturally from one relationship page to another and understand how people, projects, locations, activities, evidence, and documents connect over time.
+
+The final result must make the organisation’s work feel connected, traceable, evidence-based, and professionally told.
+
+Do not treat Projects, Beneficiaries, Locations, and Activities as isolated records. They must become an interconnected story network.
+
+Important product direction:
+This is a future distributed, white-label project documentation and impact management application.
+Do not hardcode “Kiangure Springs Environment Initiative” into the relationship pages, demo data, pricing, advisory pages, dashboards, or labels.
+Do not make the app look suitable for only one organisation.
+Use neutral product wording such as:
+
+* Project Documentation & Impact Management System
+* Organisation Impact Records
+* Community Project Records
+* Field Evidence System
+* Project Relationship Map
+* Impact History
+
+If the app has configurable organisation branding, use that branding dynamically.
+If no configurable branding exists, use neutral generic wording.
+
+Do not mention PFine Business Invoice & Quote Maker.
+Do not mention POS, receipts, cashier tracking, quotations, invoices, stock, or business sales documents.
+This app is for projects, beneficiaries, locations, field activities, evidence, documents, media, impact records, and organisational history.
+
+Core instruction:
+Build a professional interconnected relationship experience where the user can start from any major record and navigate naturally to all related records.
+
+The following navigation cycles must be strict and visible:
+
+Project → Locations → Activities → Beneficiaries → Evidence → Documents → Back to Project
+
+Beneficiary → Location → Project → Activity → Evidence → Beneficiary story
+
+Location → Projects → Activities → Beneficiaries → Evidence gallery → Location history
+
+Activity → Project → Location → Participants/Beneficiaries → Evidence → Follow-up activity
+
+Organisation dashboard → Projects → Locations → Beneficiaries → Activities → Evidence → Documents → Impact history
+
+The user must never feel trapped on a dead-end page. Every major page must help the user continue exploring the relationship story.
+
+Strict requirement:
+Relationship display is more important than raw data volume.
+Do not only create related lists.
+Do not only show plain tables.
+Do not only show IDs or technical references.
+Show meaningful relationship cards, timeline links, story paths, evidence trails, and navigation prompts.
+
+The system should answer these questions visually and textually:
+
+* What project is this connected to?
+* Where did it happen?
+* Who was involved?
+* Who benefited?
+* What activity created this result?
+* What evidence proves it?
+* What happened before this?
+* What happened after this?
+* Which location history does this belong to?
+* Which beneficiary story does this support?
+* Which project phase does this belong to?
+* What is the next related record the user should inspect?
+
+Data safety:
+Before adding or changing demo data, inspect the existing storage approach.
+If the app already has a demo seed/import system, extend or use it.
+If the app stores data in localStorage, create a safe, idempotent demo dataset loader.
+If the app uses JSON, IndexedDB, database tables, or another storage layer, use the existing storage method.
+Do not overwrite real data.
+Do not duplicate demo data when the seed runs more than once.
+Clearly mark demo records as demo/sample records where appropriate.
+Prefer safe controls such as:
+
+* Load Demo Relationship Story
+* Reset Demo Relationship Story
+* Clear Demo Data
+  These controls must not delete non-demo records.
+
+Minimum demo dataset:
+Create a rich interconnected sample dataset large enough to test the relationship experience.
+
+Minimum records:
+
+* 8 Projects
+* 10 Locations
+* 30 Beneficiaries
+* 40 Activities
+* 50 Evidence or Media records
+* 20 Document or Reference records
+
+The dataset must be fictional, realistic, and safe.
+Do not use real private personal data.
+Do not use shallow names such as “Test Project 1”, “Demo Location”, “Sample Beneficiary”, or “Activity Data”.
+Use professional realistic names, titles, dates, descriptions, notes, and outcomes.
+
+Suggested organisation-level demo story:
+Use a generic fictional organisation story suitable for diverse clients, such as:
+Green Valley Community Initiative
+Community Impact Programme
+Water, Trees and Livelihoods Programme
+Rural Springs Protection Project
+Community Resilience Field Programme
+
+The application itself must remain white-label and suitable for many organisations.
+
+Suggested project storylines:
+Create these or similar interconnected projects:
+
+1. Lower Valley Spring Protection Phase One
+   A water source protection project involving spring users, households, local volunteers, field assessments, protection work, water safety awareness, and monitoring visits.
+
+2. Community Tree Nursery and Seedling Distribution
+   A nursery and planting project connecting schools, youth volunteers, women groups, farmers, distribution records, planting sites, and survival checks.
+
+3. Riverbank Restoration and Soil Erosion Control
+   A location-focused restoration project involving erosion mapping, riverbank planting, farmer participation, site visits, and evidence of gradual recovery.
+
+4. School Environmental Education Programme
+   A school-based project connecting pupils, teachers, environment clubs, tree planting, waste education, and activity evidence.
+
+5. Market Waste Awareness and Clean-Up Campaign
+   A public clean-up and awareness project involving traders, youth volunteers, waste collection zones, market leadership, and before/after evidence.
+
+6. Women Kitchen Garden and Household Nutrition Pilot
+   A beneficiary-centred project involving women group members, training activities, demonstration gardens, household follow-ups, and nutrition records.
+
+7. Youth Field Volunteer Training Programme
+   A capacity-building project involving youth volunteers, documentation training, field assignments, attendance records, and evidence collection.
+
+8. Community Climate Resilience Documentation Project
+   A higher-level documentation project linking multiple locations, beneficiaries, activities, evidence, donor updates, and organisational impact history.
+
+Suggested locations:
+Create at least these or similar locations:
+
+* Lower Valley Protected Spring
+* Upper Ridge Erosion Zone
+* Kijani Primary School Compound
+* Central Market Clean-Up Zone
+* Community Tree Nursery Site
+* Mwangaza Women Group Garden
+* Riverside Demonstration Farm
+* Village Water Collection Point
+* Community Training Hall
+* Hilltop Run-Off Control Area
+
+Suggested beneficiary groups and people:
+Create realistic fictional beneficiaries including:
+
+* Household water users
+* Farmers
+* Women group members
+* Youth volunteers
+* School environment club members
+* Community trainers
+* Local project coordinators
+* Market traders
+* Spring users
+* Tree nursery attendants
+* Demonstration garden participants
+* Field documentation volunteers
+
+Every beneficiary must have:
+
+* Name
+* Category or role
+* Location
+* Linked project or projects
+* Linked activity or activities
+* Short impact story
+* Follow-up note
+* Evidence or reference link where supported
+
+Suggested activity types:
+Create multiple dated activities under each project:
+
+* Baseline field assessment
+* Beneficiary registration
+* Community meeting
+* Sensitisation session
+* Training workshop
+* Field implementation day
+* Tree planting day
+* Spring protection workday
+* Evidence collection visit
+* Monitoring visit
+* Beneficiary feedback session
+* Follow-up inspection
+* Project review meeting
+* Outcome documentation visit
+
+Date logic:
+The chronology must make sense.
+Pre-assessment activities may happen before the project launch only if described clearly as pre-project assessment.
+Project launch must happen before main implementation.
+Follow-up activities must happen after implementation.
+Monitoring activities must happen after field activities.
+Beneficiary feedback must happen after beneficiaries are registered and supported.
+
+Relationship display requirements:
+Improve or create relationship displays on every major dossier page.
+
+1. Project dossier relationship display
+
+Every Project dossier must show:
+
+* Project summary
+* Project purpose
+* Project status
+* Start date and progress stage
+* Main locations
+* Related beneficiaries
+* Related activities
+* Related evidence/media
+* Related documents
+* Key outcomes
+* Follow-up actions
+* Timeline of related events
+* Relationship map or relationship cards
+* “Continue the story” navigation block
+
+The Project page must show relationship sections such as:
+
+* Where this project happens
+* People and groups connected to this project
+* Activities under this project
+* Evidence collected from this project
+* Documents and references
+* Related project phases
+* What happened before
+* What happened next
+
+Each related item must have a clear reason for the relationship.
+Do not only display the related record name.
+For example:
+“Lower Valley Protected Spring — main intervention site where spring protection works and water safety training were carried out.”
+“Mwangaza Women Group — beneficiary group trained through the kitchen garden pilot and later linked to household follow-up visits.”
+
+Every Project dossier must include navigation links to:
+
+* Each related location
+* Each related beneficiary
+* Each related activity
+* Evidence/media pages or previews
+* Document/reference records where supported
+
+2. Beneficiary dossier relationship display
+
+Every Beneficiary dossier must show:
+
+* Beneficiary profile
+* Beneficiary type or category
+* Main location
+* Linked project or projects
+* Activities attended or connected to
+* Evidence connected to the beneficiary
+* Documents or references where supported
+* Impact story
+* Follow-up history
+* Relationship path back to project and location
+
+The Beneficiary page must show relationship sections such as:
+
+* Connected projects
+* Location history
+* Activities involving this beneficiary
+* Evidence involving this beneficiary
+* Follow-up and impact notes
+* Related beneficiaries or groups where appropriate
+* Navigation path through this person’s project journey
+
+The beneficiary page must answer:
+
+* Why is this beneficiary in the system?
+* Which project served them?
+* Where are they connected?
+* What activities involved them?
+* What changed or what follow-up is needed?
+* What evidence supports the record?
+
+Do not show beneficiaries as flat names only.
+Show short relationship explanations.
+
+3. Location dossier relationship display
+
+Every Location dossier must show:
+
+* Location summary
+* Location type
+* Why the location matters
+* Projects connected to this location
+* Beneficiaries connected to this location
+* Activities that happened here
+* Evidence/media from this location
+* Documents or references where supported
+* Timeline of work at this location
+* Nearby or related locations if supported
+* “Explore this location’s history” navigation block
+
+The Location page must show relationship sections such as:
+
+* Projects active at this location
+* People and groups connected here
+* Activities held here
+* Evidence captured here
+* History of interventions
+* Follow-up needs
+* Related locations or project phases
+
+The location page must answer:
+
+* What happened here?
+* Which projects used this location?
+* Who benefited here?
+* What activities took place here?
+* What evidence exists from here?
+* How has this location changed over time?
+
+4. Activity dossier relationship display
+
+Every Activity dossier must show:
+
+* Activity title
+* Activity purpose
+* Date
+* Parent project
+* Location
+* Participants or beneficiaries
+* Evidence/media
+* Documents/references
+* Outcome
+* Follow-up action
+* Previous related activity
+* Next related activity
+
+The Activity page must show relationship sections such as:
+
+* This activity belongs to
+* Where it happened
+* Who took part
+* What evidence was collected
+* What this activity changed
+* What follow-up came next
+* Related activity chain
+
+The user must be able to move from:
+Activity → Project
+Activity → Location
+Activity → Beneficiary
+Activity → Evidence
+Activity → Next activity
+Activity → Previous activity
+
+5. Evidence/media relationship display
+
+Every Evidence or Media record must clearly explain:
+
+* What the evidence shows
+* Which project it belongs to
+* Which location it was captured at
+* Which activity produced it
+* Which beneficiaries or groups it relates to
+* Date captured
+* Evidence type
+* Caption or note
+* Link back to related records
+
+Evidence must not appear as random images.
+Every evidence item should tell the user what it proves.
+
+Use captions such as:
+“Before protection work: open spring collection point before drainage improvement.”
+“Training attendance: women group members during kitchen garden preparation session.”
+“Follow-up evidence: seedlings surviving after the first monitoring visit.”
+
+6. Document/reference relationship display
+
+Every Document or Reference record must show:
+
+* Document title
+* Document type
+* Related project
+* Related location where applicable
+* Related beneficiary or group where applicable
+* Related activity where applicable
+* Why this document matters
+* Date
+* Link back to the related dossier
+
+Document records must not appear as disconnected files.
+They should explain their purpose, such as:
+
+* Baseline assessment note
+* Attendance list
+* Field visit summary
+* Beneficiary registration reference
+* Monitoring checklist
+* Project progress note
+* Partner update note
+
+Creative relationship UI requirements:
+Improve the visual presentation of relationships using existing UI patterns or create clean new components.
+
+Use some or all of these, depending on the existing app structure:
+
+* Relationship cards
+* Story trail blocks
+* “Connected records” panels
+* Relationship map sections
+* Timeline strips
+* “This record is connected to…” blocks
+* “Continue the story” navigation
+* Breadcrumbs
+* Impact journey cards
+* Evidence trail cards
+* Location history panels
+* Beneficiary journey panels
+* Project phase timeline
+* Previous/next related activity links
+* Related record badges
+* Empty-state messages that explain what relationship is missing
+
+Do not add heavy external dependencies.
+Do not introduce graph libraries unless already present.
+If a true visual graph is too expensive, create a lightweight relationship map using cards, lines, badges, arrows, or grouped panels.
+
+The design must be:
+
+* Professional
+* Organised
+* Clear
+* Trustworthy
+* Story-driven
+* Easy to navigate
+* Responsive
+* Suitable for diverse organisations
+* Not childish
+* Not overloaded
+* Not a messy dashboard
+
+Strict navigation requirements:
+Every major relationship card must be clickable where the app supports navigation.
+Every related item must lead to its proper dossier/page.
+Every dossier/page must provide a path back to the related parent and related children.
+No page should show a relationship that cannot be opened.
+No relationship link should point to a missing record.
+No broken links are allowed.
+No orphan demo records are allowed unless intentionally marked as unassigned.
+No one-way relationship should remain one-way where two-way navigation is expected.
+
+Two-way relationship rules:
+If a Project shows a Beneficiary, that Beneficiary page must show the Project.
+If a Project shows a Location, that Location page must show the Project.
+If an Activity shows a Project, the Project page must show the Activity.
+If an Activity shows a Beneficiary, the Beneficiary page must show the Activity.
+If Evidence shows a Location, the Location page must show the Evidence.
+If a Document shows a Project, the Project page must show the Document.
+
+Relationship labels:
+Use meaningful labels instead of raw field names.
+
+Use labels such as:
+
+* Main project
+* Related project
+* Primary location
+* Field activity
+* Participating beneficiary
+* Evidence collected
+* Follow-up record
+* Linked document
+* Community group
+* Project phase
+* Earlier activity
+* Next follow-up
+* Location history
+* Beneficiary journey
+* Impact trail
+
+Avoid technical labels such as:
+
+* projectId
+* locationId
+* entityId
+* refId
+* dataKey
+* relationField
+
+Technical IDs may exist internally but must not dominate the user interface.
+
+Storytelling quality requirements:
+Every major record must include a short story note.
+
+Project story note:
+Explain the problem, why the project exists, what work is being done, who is involved, and what outcome is expected.
+
+Location story note:
+Explain why the place matters, what problem exists there, what intervention happened, and how it connects to the wider organisation history.
+
+Beneficiary story note:
+Explain the beneficiary’s role, need, participation, or impact in a respectful and professional way.
+
+Activity story note:
+Explain what happened, why it mattered, who participated, what evidence was captured, and what follow-up came next.
+
+Evidence story note:
+Explain what the evidence proves.
+
+Document story note:
+Explain why the document is attached and what it supports.
+
+Do not use sensational or exaggerated wording.
+Do not claim audited impact, government certification, medical outcomes, guaranteed results, or verified donor approval unless the app has formal verification features.
+Use professional evidence-based language.
+
+Organisational history flow:
+Create or improve an organisation-wide history view if appropriate within the existing app.
+
+This may be:
+
+* Dashboard timeline
+* Impact history page
+* Project history section
+* Organisation story section
+* Activity timeline
+* Relationship overview panel
+
+The history flow must show the work moving through stages:
+
+1. Problem identification
+2. Baseline assessment
+3. Beneficiary registration
+4. Location mapping
+5. Project launch
+6. Field implementation
+7. Evidence collection
+8. Monitoring visit
+9. Beneficiary feedback
+10. Follow-up support
+11. Outcome documentation
+12. Next project phase
+
+This history view must allow navigation into related Projects, Locations, Beneficiaries, Activities, Evidence, and Documents.
+
+Dashboard relationship requirements:
+If the app has a dashboard, improve it so the demo data tells a clear story.
+
+Dashboard should show:
+
+* Total projects
+* Total locations
+* Total beneficiaries
+* Total activities
+* Total evidence/media records
+* Total documents
+* Recent activities
+* Active project phases
+* Locations with most activity
+* Beneficiaries recently updated
+* Evidence recently collected
+* Organisation history or impact timeline
+* Quick links into relationship pages
+
+Do not make the dashboard only show plain numbers.
+Numbers should lead into stories and related records.
+
+Search and filter relationship requirements:
+If search or filters exist, ensure they support relationship discovery.
+
+Test:
+
+* Search a project name and open its related locations.
+* Search a beneficiary and navigate to projects and activities.
+* Search a location and navigate to activities and evidence.
+* Search an activity and navigate to project, location, beneficiaries, and evidence.
+* Filter by project status where supported.
+* Filter by location where supported.
+* Filter by date where supported.
+* Filter by beneficiary type where supported.
+
+Relationship integrity testing:
+After creating data and UI displays, test every relationship cycle thoroughly.
+
+Must test these cycles:
+
+Cycle 1:
+Project → Location → Activity → Beneficiary → Project
+
+Cycle 2:
+Location → Project → Evidence → Activity → Location
+
+Cycle 3:
+Beneficiary → Activity → Evidence → Project → Beneficiary
+
+Cycle 4:
+Dashboard → Project → Activity → Evidence → Document → Project
+
+Cycle 5:
+Location → Beneficiaries → Activities → Follow-up activity → Location
+
+Cycle 6:
+Project → Documents → Evidence → Location → Project
+
+For each cycle, confirm:
+
+* Every page opens correctly
+* The relationship makes sense
+* The reverse relationship exists
+* The user can continue navigating
+* The story remains coherent
+* No empty section appears when related records exist
+* No broken ID or missing record appears
+* No console error appears
+
+Testing checklist:
+Perform a thorough test of:
+
+1. Demo data seed creation
+2. Demo data duplicate prevention
+3. Demo data reset/clear behaviour
+4. Project creation
+5. Location creation
+6. Beneficiary creation
+7. Activity creation
+8. Evidence/media creation
+9. Document/reference creation
+10. Relationship saving
+11. Relationship loading after refresh
+12. Relationship cards
+13. Relationship timelines
+14. Story trail display
+15. Continue-story navigation
+16. Project dossier
+17. Beneficiary dossier
+18. Location dossier
+19. Activity dossier
+20. Evidence/media display
+21. Document/reference display
+22. Dashboard counts
+23. Dashboard story flow
+24. Search behaviour
+25. Filter behaviour where supported
+26. Mobile/responsive relationship display
+27. Empty states
+28. Broken links
+29. Missing IDs
+30. Reverse relationships
+31. Console errors
+32. Storage errors
+33. Accessibility of clickable relationship items
+34. White-label neutrality
+35. No hardcoded Kiangure-only branding
+
+Bug-fixing scope:
+Fix only bugs directly related to:
+
+* Demo data loading
+* Relationship integrity
+* Interlinked navigation
+* Dossier rendering
+* Related cards
+* Timelines
+* Evidence/document linkage
+* Broken relationship flows
+* Missing reverse links
+* Storage of relationship data
+* Dashboard relationship display
+* Search/filter relationship discovery
+
+Do not refactor unrelated parts of the app.
+Do not redesign unrelated screens.
+Do not replace the whole app architecture.
+Do not introduce unnecessary dependencies.
+Do not make destructive data changes.
+
+Design style:
+Use a premium, clean, serious interface.
+Use the existing colour system where available.
+Use neutral, white-label-friendly visual style.
+Avoid organisation-specific branding.
+Avoid hardcoded client names.
+Use professional spacing, readable text, clean cards, and clear hierarchy.
+Make the relationship sections visually stronger than ordinary lists.
+Make the app feel like a professional project evidence and organisational memory system.
+
+Suggested relationship section names:
+Use these or similar section headings:
+
+* Relationship Map
+* Impact Trail
+* Connected Records
+* Project Story
+* Beneficiary Journey
+* Location History
+* Field Activity Chain
+* Evidence Trail
+* Supporting Documents
+* What Happened Here
+* Who Was Involved
+* Where This Connects
+* Continue the Story
+* Related Follow-Up
+* Connected Project Phases
+* Organisation History
+
+Suggested “Continue the Story” links:
+Each page should recommend the next useful navigation path.
+
+On a Project page:
+
+* View the main location
+* See involved beneficiaries
+* Review field activities
+* Open the evidence trail
+* Check supporting documents
+
+On a Beneficiary page:
+
+* View the project that supported this beneficiary
+* Open the location record
+* Review activities involving this beneficiary
+* See follow-up evidence
+
+On a Location page:
+
+* View projects active here
+* See beneficiaries connected to this location
+* Review activity history at this location
+* Open evidence captured here
+
+On an Activity page:
+
+* Go to parent project
+* Open location
+* View participants
+* Review evidence
+* Open next follow-up activity
+
+On an Evidence page:
+
+* Go to project
+* Go to activity
+* Go to location
+* Go to related beneficiary or group
+
+Empty state requirements:
+Where no relationship exists, show useful empty states.
+
+Examples:
+“No beneficiaries are linked to this project yet. Add beneficiaries to show who was served or involved.”
+“No evidence is attached to this activity yet. Add images or files to document what happened.”
+“No follow-up activity has been recorded yet. Add one to continue this activity chain.”
+“No documents are linked to this location yet. Attach assessment notes, maps, or field references.”
+
+Do not show confusing blank areas.
+
+Data model care:
+Use the existing entity models and relationship fields.
+If field names are inconsistent, normalise only the relationship logic needed for this task.
+Maintain stable IDs for demo records.
+Avoid circular errors.
+Relationship cycles are allowed in navigation, but data storage must remain safe and not cause infinite rendering loops.
+When rendering related records, guard against missing IDs, deleted records, invalid references, and recursive loops.
+
+Performance:
+Avoid expensive nested rendering that can freeze the app.
+Do not render infinite relationship recursion.
+Show limited previews where needed, with “View all” links.
+Use safe helper functions for relationship lookups if appropriate.
+Keep the app responsive.
+
+Expected implementation output:
+
+1. Add or improve interconnected demo data.
+2. Add or improve relationship display sections.
+3. Add or improve relationship navigation between Projects, Beneficiaries, Locations, Activities, Evidence, and Documents.
+4. Add or improve story-driven dossier pages.
+5. Add or improve dashboard/history relationship storytelling where appropriate.
+6. Add or improve safe demo loading/reset controls where appropriate.
+7. Fix direct bugs found in relationship navigation and display.
+8. Produce a final implementation summary.
+9. Produce a detailed final test report.
+
+Final implementation summary must include:
+
+* Files changed
+* What data was added
+* What relationship display was improved
+* What navigation flows were improved
+* What dossier pages were improved
+* What dashboard or history flow was improved
+* What bugs were fixed
+* Confirmation that no unrelated logic was changed
+
+Final test report must include:
+
+* Number of projects created
+* Number of locations created
+* Number of beneficiaries created
+* Number of activities created
+* Number of evidence/media records created
+* Number of document/reference records created
+* Relationship cycles tested
+* Reverse relationships tested
+* Navigation flows tested
+* Dossier pages tested
+* Dashboard/history flow tested
+* Search/filter relationship tests completed
+* Mobile/responsive checks completed
+* Broken links found and fixed
+* Console/storage errors found and fixed
+* Remaining limitations, if any
+* Confirmation that all demo data is fictional and safe
+* Confirmation that no Kiangure-only branding was hardcoded
+* Confirmation that the relationship experience now tells a professional, interconnected story of the organisation’s work
+
+Final acceptance criteria:
+The work is only complete when the app clearly demonstrates creative and strict data relationships.
+
+A user must be able to open any Project, Beneficiary, Location, Activity, Evidence, or Document and immediately understand:
+
+* What it is
+* Why it matters
+* What it connects to
+* Where it fits in the wider organisation story
+* What happened before
+* What happened next
+* Which related page to open next
+
+The application must feel like a connected organisational memory and impact documentation system, not a collection of disconnected records.

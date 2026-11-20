@@ -1,0 +1,90 @@
+{
+  "name": "pfine-organisation-project-management-application",
+  "productName": "PFine Organisation Project Management Application",
+  "version": "0.1.0",
+  "description": "Offline-first project documentation and impact management desktop application.",
+  "author": "Patrick Wilson Githinji (PFine)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "check": "node --check main.js && node --check preload.js && node --check assets/js/app.js && node --check src/main/database.js && node --check src/main/storage.js && node --check src/main/extractors.js && node --check src/main/ipc.js",
+    "rebuild-native": "electron-builder install-app-deps",
+    "pack:modern": "electron-builder --win --x64 --dir",
+    "dist:modern": "electron-builder --win nsis --x64",
+    "pack:win": "npm run pack:modern",
+    "dist:win": "npm run dist:modern",
+    "dist:installer": "npm run dist:modern",
+    "legacy:installer:notes": "node -e \"console.log('Legacy Windows installer not built in this branch. Electron 31.7.7 does not support Windows 7/8/8.1. See INSTALLER-NOTES.md for the separate legacy strategy.')\""
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.8.1",
+    "mammoth": "^1.8.0",
+    "pdf-parse": "^1.1.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "electron": "31.7.7",
+    "electron-builder": "24.13.3",
+    "playwright": "^1.61.1"
+  },
+  "build": {
+    "appId": "org.pfine.organisationprojectmanagement",
+    "productName": "PFine Organisation Project Management Application",
+    "copyright": "Copyright © Patrick Wilson Githinji (PFine). All rights reserved.",
+    "asar": true,
+    "files": [
+      "**/*",
+      "!.clean-client-sim{,/**/*}",
+      "!.runtime-verification{,/**/*}",
+      "!release*{,/**/*}",
+      "!dist{,/**/*}",
+      "!.tmp-npm{,/**/*}",
+      "!.npm-cache{,/**/*}",
+      "!node_modules/.cache{,/**/*}",
+      "!*.log",
+      "!runtime-verify.js",
+      "!runtime-verify-output.txt",
+      "!targeted-ui-check.js",
+      "!Electron runtime.txt",
+      "!kingure-springs-environment-initiative-app.txt",
+      "!build-windows.bat",
+      "!start-app.bat"
+    ],
+    "directories": {
+      "output": "dist/installers/modern"
+    },
+    "extraMetadata": {
+      "main": "main.js",
+      "name": "pfine-organisation-project-management-application",
+      "productName": "PFine Organisation Project Management Application"
+    },
+    "win": {
+      "publisherName": [
+        "Patrick Wilson Githinji (PFine)"
+      ],
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icons/app-icon.ico",
+      "artifactName": "pfine-organisation-project-management-setup-win10-win11-${version}.${ext}",
+      "legalTrademarks": "Patrick Wilson Githinji (PFine)"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "PFine Organisation Project Management Application",
+      "uninstallDisplayName": "PFine Organisation Project Management Application",
+      "deleteAppDataOnUninstall": false,
+      "warningsAsErrors": false,
+      "include": "build/installer-modern.nsh"
+    }
+  }
+}

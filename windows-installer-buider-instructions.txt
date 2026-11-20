@@ -1,0 +1,346 @@
+Project Directory:
+
+D:\kiangure-springs-environment-initiative
+
+CRITICAL FIRST STEP:
+
+Before inspecting, editing, running tests, creating files, changing schema, or making any implementation decision, first read and obey:
+
+D:\kiangure-springs-environment-initiative\AGENTS.md
+
+Work only inside the existing project documentation and impact management application.
+
+Goal:
+Create a safe Windows installer packaging setup for the application, with a modern installer for supported Windows versions and an optional legacy installer strategy for Windows 7 SP1 / Windows 8.1 compatibility.
+
+Important:
+Do not rewrite unrelated app logic.
+Do not change project, beneficiary, location, activity, evidence, document, media, storage, dossier, navigation, pricing, copyright, or relationship logic unless packaging requires a small safe adjustment.
+Do not introduce unnecessary dependencies.
+Do not blindly upgrade Electron, Node, build tools, or bundlers without checking compatibility.
+Do not claim Windows 7/8 support unless the built executable is actually tested on those systems or clearly marked as legacy/unverified.
+Use targeted edits only.
+
+Product context:
+This is a future distributed, white-label project documentation and impact management application.
+Do not hardcode Kiangure Springs Environment Initiative branding into the installer.
+The installer must be suitable for diverse clients and future distribution.
+Use neutral naming such as:
+Project Documentation & Impact Management System
+or use the existing configurable product/app name if already available.
+
+Installer strategy:
+Create two packaging targets if practical:
+
+1. Modern Windows Installer
+Target:
+Windows 10 and Windows 11
+
+Purpose:
+This is the main recommended installer for public distribution.
+
+2. Legacy Windows Installer
+Target:
+Windows 7 SP1, Windows 8, Windows 8.1, Windows 10, Windows 11 where technically possible
+
+Purpose:
+This is only for legacy clients who still run old Windows systems.
+
+Important legacy warning:
+Windows 7, Windows 8, and Windows 8.1 are no longer safely supported operating systems. The app may run on them only as a legacy compatibility build. The installer and app must clearly avoid promising full modern security, long-term support, or guaranteed compatibility on unsupported Windows versions.
+
+Runtime compatibility:
+Before choosing the packaging runtime, inspect the existing app structure.
+
+If the app is already Electron-based:
+- Check the current Electron version.
+- Do not use Electron 23 or later for the legacy Windows 7/8 build, because modern Electron versions dropped Windows 7/8/8.1 support.
+- If legacy support is required, create a separate legacy build configuration using the last compatible Electron generation where appropriate.
+- Keep the modern build on a safer supported runtime for Windows 10/11 where possible.
+
+If the app is not Electron-based:
+- Identify the safest packaging method.
+- Prefer a lightweight local desktop wrapper only if it does not break offline functionality.
+- Do not create a fragile or untested wrapper.
+- Do not require internet access for core offline use.
+- Do not make the app depend on an external browser that may not exist on old Windows systems unless clearly documented.
+
+Installer technology:
+Prefer Inno Setup for Windows installer creation unless the project already uses another reliable installer system.
+
+The installer should support:
+- Installing the application into Program Files or a user-safe application directory
+- Creating Start Menu shortcuts
+- Creating optional Desktop shortcut
+- Creating an uninstall entry
+- Showing app name, version, publisher/developer name, and copyright notice
+- Preserving user data during upgrades
+- Preventing accidental data deletion during uninstall unless the user explicitly chooses to remove data
+- Detecting unsupported or legacy Windows versions and showing a clear message
+- Building repeatable installer output
+
+Installer names:
+Use clear output names such as:
+
+Modern installer:
+project-documentation-impact-system-setup-win10-win11.exe
+
+Legacy installer:
+project-documentation-impact-system-legacy-setup-win7-win8.exe
+
+Do not use client-specific names unless the app has configurable build branding.
+
+Legacy installer warning message:
+Add a clear installer notice for Windows 7, Windows 8, and Windows 8.1:
+
+“This is a legacy compatibility installation. Windows 7, Windows 8, and Windows 8.1 are no longer supported by Microsoft for normal security updates. This application may run on this system, but security, browser/runtime compatibility, future updates, and third-party dependency support may be limited. For best results, use Windows 10 or Windows 11.”
+
+Modern installer warning:
+If the modern installer is run on Windows 7/8/8.1, either block installation or show a warning depending on the chosen build strategy.
+
+Preferred behaviour:
+- Modern installer should require Windows 10 or later.
+- Legacy installer may allow Windows 7 SP1 / Windows 8.1 if the runtime supports it.
+
+Operating system checks:
+Add installer-level OS checks.
+
+Modern build:
+- Allow Windows 10 and Windows 11.
+- Block or warn on Windows 7, Windows 8, and Windows 8.1.
+
+Legacy build:
+- Allow Windows 7 SP1 or later only if compatible.
+- Warn clearly on Windows 7/8/8.1.
+- Do not support Windows XP or Vista.
+- Do not claim support for 32-bit Windows unless a 32-bit build is actually produced and tested.
+
+Architecture:
+Create 64-bit installer by default.
+Only create 32-bit installer if the app runtime, dependencies, and storage layer are confirmed to work safely on 32-bit systems.
+
+Data safety:
+The installer must not delete app data during normal update installation.
+User data must be stored separately from application files where possible.
+Use a safe data directory such as the app’s existing data path or a standard per-user application data directory.
+Do not store user records only inside the installation directory if that causes update/uninstall risk.
+If existing localStorage/IndexedDB/data files are used, confirm how they survive app updates.
+
+Update safety:
+The installer must support installing a newer version over an older version without destroying data.
+If schema changes are needed, use safe migration logic and backup first.
+Do not reset demo data or user data during upgrade.
+
+Offline support:
+The installed app must preserve offline-first behaviour.
+Core features should open without internet.
+Projects, beneficiaries, locations, activities, evidence, documents, dossier pages, pricing page, copyright page, and relationship pages should work locally where currently supported.
+Do not add forced online activation unless licensing requires it and the user has approved that architecture.
+If licence activation is added, it must not break approved offline usage unless the licence design intentionally requires periodic checks.
+
+Files to create or update:
+Create or update only the necessary packaging files, such as:
+- package scripts
+- installer configuration
+- Inno Setup script
+- build notes
+- release checklist
+- version metadata
+- icon/app metadata where already available
+
+Do not create excessive files.
+
+Installer metadata:
+Include:
+- App name
+- Version
+- Publisher/developer name if already known from project settings
+- Copyright notice
+- Description
+- Install directory
+- Uninstall support
+- Licence/copyright page link if available
+- Optional icon if already available
+
+Do not invent legal company details.
+Use existing project metadata where available.
+
+Testing requirements:
+After creating the installer setup, perform packaging checks.
+
+Test at minimum:
+1. Build command runs successfully.
+2. Installer file is created.
+3. Installed app launches.
+4. App opens without internet where offline mode is supported.
+5. Navigation works after installation.
+6. Project pages work.
+7. Beneficiary pages work.
+8. Location pages work.
+9. Activity pages work.
+10. Evidence/media views work.
+11. Document/reference views work.
+12. Pricing page opens.
+13. Copyright and distribution page opens.
+14. Relationship navigation works.
+15. Demo data loads where supported.
+16. User data is not removed during reinstall/update.
+17. Uninstaller exists.
+18. Desktop shortcut works where selected.
+19. Start Menu shortcut works.
+20. No console errors appear on first launch.
+21. No missing asset paths after packaging.
+22. No broken routes after packaging.
+23. No hardcoded development localhost path remains in production build.
+24. No absolute local machine path remains in the build.
+25. Installer output name and version are correct.
+
+Legacy testing:
+If a legacy installer is created, Codex must clearly report whether Windows 7/8 compatibility was actually tested or only prepared.
+
+If Codex cannot test on Windows 7/8 directly, it must state:
+“Legacy installer prepared but not certified on Windows 7/8 because no Windows 7/8 test environment was available.”
+
+Do not give false certification.
+
+Documentation:
+Create a short INSTALLER-NOTES.md or update existing release notes with:
+
+- Modern installer target: Windows 10/11
+- Legacy installer target: Windows 7 SP1 / Windows 8.1, if created
+- Warning that Windows 7/8/8.1 are unsupported operating systems
+- Recommended OS: Windows 10 or Windows 11
+- Installation steps
+- Upgrade steps
+- Data backup advice
+- Uninstall behaviour
+- Known limitations
+- Build command
+- Output file location
+
+Acceptance criteria:
+The work is complete only when:
+
+- The modern Windows installer can be built.
+- The app installs and launches successfully.
+- Existing app functionality still works after installation.
+- User data is not destroyed by update/reinstall.
+- The installer does not hardcode one organisation’s branding.
+- The installer is suitable for future distribution to diverse clients.
+- Legacy Windows support is handled honestly and safely.
+- Windows 7/8/8.1 are not presented as fully safe modern platforms.
+- Codex provides a final summary and test report.
+
+Final response from Codex must include:
+
+1. Packaging approach used
+2. Installer technology used
+3. Files changed
+4. Build commands
+5. Installer output path
+6. Supported Windows versions
+7. Legacy Windows limitations
+8. Whether Windows 7/8 was actually tested
+9. Data safety notes
+10. Upgrade/uninstall behaviour
+11. Bugs found and fixed
+12. Remaining limitations
+13. Confirmation that no unrelated app logic was changed
+
+Add the following publisher and installer identity requirements to the Windows installer packaging task.
+
+Publisher identity:
+The Windows installer must acknowledge the publisher as:
+
+Patrick Wilson Githinji (PFine)
+
+Product name:
+PFine Organisation Project Management Application
+
+Installer publisher display:
+Where installer metadata supports publisher information, set the publisher/company field to:
+
+Patrick Wilson Githinji (PFine)
+
+Where product metadata supports application name, set the product name to:
+
+PFine Organisation Project Management Application
+
+Where copyright metadata is supported, set the copyright notice to:
+
+Copyright © Patrick Wilson Githinji (PFine). All rights reserved.
+
+Important verification rule:
+Do not falsely claim that Windows will show a verified/trusted publisher unless the installer and executable are actually signed using a valid trusted code-signing certificate.
+
+If no trusted code-signing certificate is available yet:
+
+* Set the installer metadata publisher as Patrick Wilson Githinji (PFine).
+* Add a note in INSTALLER-NOTES.md explaining that the installer metadata identifies the publisher, but Windows may still show “Unknown Publisher” or SmartScreen warnings until the application is digitally signed with a trusted code-signing certificate.
+* Do not use the words “verified publisher” in the Windows security sense unless actual signing is implemented and verified.
+
+If a valid code-signing certificate is available:
+
+* Add a signing step for the installer and executable.
+* Sign the final .exe installer.
+* Sign the packaged application executable where applicable.
+* Verify the signature after signing.
+* Confirm that the certificate subject/publisher identity matches Patrick Wilson Githinji, PFine, or the legally registered publisher identity available on the certificate.
+* Add the signing command and verification command to the build/release documentation.
+* Confirm whether Windows displays the publisher correctly after installation testing.
+
+Installer visible text:
+Where the installer shows a welcome, about, licence, or publisher section, include professional wording such as:
+
+PFine Organisation Project Management Application is published by Patrick Wilson Githinji (PFine). This software is licensed for authorised organisation, project, field documentation, beneficiary, location, activity, evidence, and impact management use according to the applicable licence terms.
+
+Do not hardcode client-specific branding into the installer.
+Do not hardcode Kiangure Springs Environment Initiative as the publisher.
+Do not rename the distributed product to a single client’s project name.
+The client organisation name should remain configurable inside the app where supported.
+
+Build output naming:
+Use installer output names such as:
+
+pfine-organisation-project-management-setup-win10-win11.exe
+
+and, if a legacy build is created:
+
+pfine-organisation-project-management-legacy-setup-win7-win8.exe
+
+Installer metadata checklist:
+Confirm the installer includes:
+
+* Product name: PFine Organisation Project Management Application
+* Publisher: Patrick Wilson Githinji (PFine)
+* Copyright: Copyright © Patrick Wilson Githinji (PFine). All rights reserved.
+* Version number
+* Installer output filename
+* Uninstall display name
+* Start Menu shortcut name
+* Desktop shortcut name where selected
+* Neutral app description suitable for future distributed clients
+
+Signing checklist:
+If signing is implemented, confirm:
+
+* The installer .exe is signed
+* The application executable is signed where applicable
+* The digital signature verifies successfully
+* The certificate identity is correct
+* The signed installer still installs correctly
+* The app still launches correctly after signing
+* No packaging files use absolute local development paths
+* No unrelated app logic was changed
+
+Final Codex report must include:
+
+1. Whether publisher metadata was added
+2. Whether code signing was implemented
+3. Whether the app is actually Windows-verified or only metadata-labelled
+4. The exact publisher name used
+5. The product name used
+6. The installer output path
+7. Any SmartScreen or Unknown Publisher limitations
+8. Confirmation that no Kiangure-only branding was hardcoded into the installer
+9. Confirmation that the installer remains suitable for future distributed clients

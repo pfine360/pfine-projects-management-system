@@ -1,0 +1,52 @@
+# Node dependencies
+node_modules/
+
+# Generated builds & installers
+dist/
+build/
+*.exe
+*.msi
+*.zip
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+.tmp/
+temp/
+
+# Cache
+.cache/
+
+# Runtime verification outputs
+.runtime-verification/
+.clean-client-sim/
+runtime-verify.js
+runtime-verify-output.txt
+targeted-ui-check.js
+
+# Proprietary desktop application & core sync modules
+src/main/
+main.js
+preload.js
+index.html
+start-app.bat
+build-windows.bat
+pfine-cloud-sync.js
+sync-bridge.js
+
+# Internal snapshots, letterheads & release notes
+pfine-organisation-pm-snapshot.json
+Ksie-LetterHead.png
+INSTALLER-NOTES.md
+INSTALLER-RELEASE-CHECKLIST.md
+
+# Operating system files
+.DS_Store
+Thumbs.db

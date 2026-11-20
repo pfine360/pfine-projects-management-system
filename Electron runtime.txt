@@ -1,0 +1,241 @@
+Project Directory:
+
+D:\kiangure-springs-environment-initiative
+
+First read and obey:
+
+D:\kiangure-springs-environment-initiative\AGENTS.md
+
+Task:
+
+Do a focused runtime verification and bug-fix pass for the Kiangure Project OS upgrade.
+
+Do not add new major features.
+
+Do not redesign the app.
+
+Do not rewrite large files unless a file is broken beyond small patching.
+
+Do not scan unrelated files.
+
+Inspect only the files needed to verify and fix the current Electron app.
+
+Important context:
+
+The previous upgrade changed:
+
+* index.html
+* assets/js/app.js
+* assets/css/styles.css
+* preload.js
+* src/main/database.js
+* src/main/ipc.js
+* src/main/extractors.js
+* README.md
+
+The previous syntax check passed with:
+
+npm run check
+
+But full Electron runtime verification was not completed because better-sqlite3 is built for the Electron runtime and a direct Node smoke test was blocked.
+
+Current goal:
+
+Verify the app actually works inside Electron and fix any real bugs found.
+
+Required verification areas:
+
+1. App startup
+
+Run the app with:
+
+npm start
+
+Confirm the Electron window opens without console/runtime errors.
+
+Check main-process and renderer-process errors.
+
+Fix only real errors.
+
+2. Login
+
+Verify:
+
+* Admin login works
+* Default admin credentials work if documented
+* Failed login shows a proper message
+* Logout works
+* Session behaviour is acceptable
+
+3. Database migration and startup safety
+
+Verify:
+
+* Existing database opens safely
+* New tables are created safely
+* No destructive migration runs
+* Existing records are preserved
+* Default categories/settings/users seed correctly without duplicates
+
+4. Navigation
+
+Click and verify each real module:
+
+* Command Centre
+* Projects
+* Beneficiaries
+* Locations
+* Excel Imports
+* Documents
+* Photo Evidence
+* Activities
+* Timeline
+* Reports
+* Users
+* Settings
+
+Fix broken navigation, dead module switching, missing render functions, or console errors.
+
+Do not create fake modules.
+
+5. Project-beneficiary-location workflow
+
+Manually test and fix:
+
+* Create a location with county, ward, village, latitude, and longitude
+* Create a beneficiary
+* Link beneficiary to location if supported
+* Create a project
+* Link project to beneficiary
+* Link project to location
+* Open project dossier/profile
+* Confirm linked beneficiary appears
+* Confirm linked location appears
+* Confirm timeline/story sections do not crash
+* Confirm dashboard counts update
+
+6. Activities
+
+Verify:
+
+* Add an activity
+* Link it to project, beneficiary, and location where supported
+* Save metrics JSON if supported
+* Confirm activity appears in project, beneficiary, and location story views
+* Confirm it contributes to dashboard/report logic where already implemented
+
+7. Excel upload and extraction
+
+Verify .xlsx upload first.
+
+Use any available test .xlsx file, or create the smallest safe local test file only if needed and allowed by AGENTS.md.
+
+Then verify .xls if supported.
+
+Confirm:
+
+* File upload works
+* Excel import record is created
+* Sheets are created
+* Rows are extracted
+* Each row is saved independently
+* Sheet tabs render
+* Styled HTML table renders
+* Row numbers show
+* Row detail view opens
+* Review status can be changed
+* Mapping JSON can be saved
+* Row can be converted into a project, beneficiary, location, or activity where implemented
+* Converted row remains linked to the original import
+* Raw row JSON is preserved
+
+Fix any upload, extraction, IPC, database, rendering, or conversion bug found.
+
+Do not overbuild the Excel feature beyond making the current implemented flow work.
+
+8. Documents and photos
+
+Verify:
+
+* Upload document/photo where implemented
+* Link upload to project, beneficiary, or location
+* Confirm file metadata is saved
+* Confirm gallery/list displays properly
+* Confirm linked dossier pages show related uploads where implemented
+
+9. Timeline
+
+Verify timeline creation for:
+
+* Project creation
+* Beneficiary creation
+* Location creation
+* Excel import
+* Row conversion
+* Activity creation
+* Photo/document upload where implemented
+
+Fix timeline insert/render errors.
+
+10. Reports and print view
+
+Verify report pages for:
+
+* All projects
+* Single project
+* All beneficiaries
+* Single beneficiary
+* All locations
+* Single location
+* Excel import
+* Extracted data
+* Activity
+* Impact summary
+
+Fix broken report rendering.
+
+Verify print CSS:
+
+* Navigation hidden
+* Buttons hidden
+* Forms hidden
+* Filters hidden
+* Editing controls hidden
+* Report content remains clean and printable
+
+11. README accuracy
+
+Update README.md only if the current instructions are now inaccurate.
+
+Do not claim unsupported features are complete.
+
+Be honest about:
+
+* OCR not implemented
+* .doc safe-storage-only if true
+* PDF text-first extraction if true
+* Any Excel limitations
+* Any Electron runtime limitations
+
+Final output required:
+
+Summarise:
+
+* Files inspected
+* Files changed
+* Runtime checks performed
+* Bugs found
+* Bugs fixed
+* Excel .xlsx result
+* Excel .xls result
+* Project-beneficiary-location result
+* Report/print result
+* Remaining risks
+* Manual test steps
+* Whether the app is ready for the next feature pass
+
+Quality rule:
+
+This is a verification and stabilisation pass.
+
+Do not expand features until the current Kiangure Project OS upgrade is proven to run correctly.
